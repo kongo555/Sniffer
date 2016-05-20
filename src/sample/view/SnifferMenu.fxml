@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.SnifferMenuController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutY="28.0" orientation="VERTICAL" prefHeight="372.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="packetTable" prefHeight="195.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="noColumn" prefWidth="75.0" text="No." />
+                      <TableColumn fx:id="timeColumn" prefWidth="75.0" text="Time" />
+                        <TableColumn fx:id="sourceColumn" prefWidth="123.0" text="Source" />
+                        <TableColumn fx:id="destinationColumn" prefWidth="142.0" text="Destination" />
+                        <TableColumn fx:id="sizeColumn" prefWidth="73.0" text="Size" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextArea fx:id="detailsArea" layoutX="66.0" layoutY="-2.0" prefHeight="195.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+      <HBox layoutX="85.0" layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="85.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleStart" text="Start" />
+            <Button layoutX="157.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleStop" text="Stop" AnchorPane.leftAnchor="157.0" AnchorPane.topAnchor="2.0" />
+            <Button mnemonicParsing="false" onAction="#handleClear" text="Clear" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
